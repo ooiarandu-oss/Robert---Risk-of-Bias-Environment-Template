@@ -1,4 +1,8 @@
 ROBINS_E = {
+    "language": "pt",
+    "items_language": "pt",
+    "translation_note": None,
+    "reference": "Reference to be completed according to the official ROBINS-E documentation.",
     "id": "robins-e",
     "family": "ROBINS",
     "name": "ROBINS-E",

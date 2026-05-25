@@ -1,4 +1,8 @@
 ROB2 = {
+    "language": "pt",
+    "items_language": "pt",
+    "translation_note": None,
+    "reference": "Sterne JAC, Savović J, Page MJ, Elbers RG, Blencowe NS, Boutron I, et al. RoB 2: A revised tool for assessing risk of bias in randomized trials.",
     "id": "rob2",
     "family": "RoB 2",
     "name": "RoB 2.0",

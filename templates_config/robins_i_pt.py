@@ -1,4 +1,8 @@
 ROBINS_I = {
+    "language": "pt",
+    "items_language": "pt",
+    "translation_note": None,
+    "reference": "Sterne JA, Hernán MA, Reeves BC, Savović J, Berkman ND, Viswanathan M, et al. ROBINS-I: a tool for assessing risk of bias in non-randomised studies of interventions. BMJ. 2016;355:i4919.",
     "id": "robins-i",
     "family": "ROBINS",
     "name": "ROBINS-I",

@@ -1,4 +1,8 @@
 JBI_CASE_SERIES = {
+    "language": "pt",
+    "items_language": "en",
+    "translation_note": "Os itens das escalas foram mantidos no idioma original pela falta de trabalhos de tradução e adaptação cultural.",
+    "reference": "Joanna Briggs Institute. Critical Appraisal Tools. JBI.",
     "id": "jbi-cs",
     "family": "JBI",
     "name": "JBI Case Series",

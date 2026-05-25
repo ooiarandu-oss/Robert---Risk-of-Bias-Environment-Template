@@ -1,4 +1,8 @@
 JBI_CROSS_SECTIONAL = {
+    "language": "pt",
+    "items_language": "en",
+    "translation_note": "Os itens das escalas foram mantidos no idioma original pela falta de trabalhos de tradução e adaptação cultural.",
+    "reference": "Joanna Briggs Institute. Critical Appraisal Tools. JBI.\nPeters MDJ, Godfrey CM, Khalil H, McInerney P, Parker D, Soares CB. Guidance for conducting systematic scoping reviews. International Journal of Evidence-Based Healthcare. 2015;13(3):141–146.",
     "id": "jbi-xs",
     "family": "JBI",
     "name": "JBI Cross-sectional",

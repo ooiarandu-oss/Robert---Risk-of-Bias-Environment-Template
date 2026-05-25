@@ -1,4 +1,8 @@
 DOWNS_BLACK = {
+    "language": "pt",
+    "items_language": "en",
+    "translation_note": "Os itens das escalas foram mantidos no idioma original pela falta de trabalhos de tradução e adaptação cultural.",
+    "reference": "Downs SH, Black N. The feasibility of creating a checklist for the assessment of the methodological quality both of randomised and non-randomised studies of health care interventions. Journal of Epidemiology & Community Health. 1998;52(6):377–384. doi:10.1136/jech.52.6.377.",
     "id": "db",
     "family": "Downs and Black",
     "name": "Downs and Black Checklist",

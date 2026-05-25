@@ -1,4 +1,8 @@
 NOS_CROSS_SECTIONAL = {
+    "language": "pt",
+    "items_language": "pt",
+    "translation_note": None,
+    "reference": "Wells GA, Shea B, O’Connell D, Peterson J, Welch V, Losos M, Tugwell P. The Newcastle-Ottawa Scale (NOS) for assessing the quality of nonrandomised studies in meta-analyses.",
     "id": "nos-xs",
     "family": "Newcastle-Ottawa Scale",
     "name": "NOS Cross-sectional",
