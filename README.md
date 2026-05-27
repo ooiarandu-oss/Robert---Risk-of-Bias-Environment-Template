@@ -1,4 +1,4 @@
-# Robert — Risk of Bias Environment Template
+# Robert — Risk of Bias and Evidence Template
 
 **Robert** is a free and modular Streamlit application designed to support risk-of-bias assessment, methodological appraisal, GRADE assessment, and structured reporting in evidence synthesis.
 
