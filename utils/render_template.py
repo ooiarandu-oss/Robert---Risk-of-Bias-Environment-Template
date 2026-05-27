@@ -43,11 +43,11 @@ PORTUGUESE_LABELS = {
 }
 
 
-def render_instrument_form(instrument, locale='en'):
+def render_instrument_form(selected_inst, locale='en'):
     labels = ENGLISH_LABELS if locale == 'en' else PORTUGUESE_LABELS
 
-    st.markdown(f"### {instrument['name']}")
-    st.caption(instrument.get('meta', ''))
+    st.markdown(f"### {selected_inst['name']}")
+    st.caption(selected_inst.get('meta', ''))
 
     with st.expander(labels['study_info'], expanded=True):
         col1, col2 = st.columns(2)
@@ -65,36 +65,36 @@ def render_instrument_form(instrument, locale='en'):
 
     responses = {}
 
-    if instrument['type'] in ['robins', 'rob']:
-        for dom in instrument['domains']:
+    if selected_inst['type'] in ['robins', 'rob']:
+        for dom in selected_inst['domains']:
             st.markdown(f"#### Domínio {dom['num']}: {dom['name']}")
             if 'signaling_questions' in dom and dom['signaling_questions']:
                 for sq in dom['signaling_questions']:
                     key = f"q_{dom['num']}_{sq['num']}"
                     st.write(f"**{sq['num']}** {sq['text']}")
-                    responses[key] = st.radio(labels['response'], instrument['options'], key=key, horizontal=True, label_visibility='collapsed')
+                    responses[key] = st.radio(labels['response'], selected_inst['options'], key=key, horizontal=True, label_visibility='collapsed')
 
-            if 'judgements' in instrument:
+            if 'judgements' in selected_inst:
                 j_key = f"judgement_{dom['num']}"
                 st.write(f"**{labels['domain_judgement']}**")
-                responses[j_key] = st.radio(labels['domain_judgement'], instrument['judgements'], key=j_key, horizontal=True, label_visibility='collapsed')
+                responses[j_key] = st.radio(labels['domain_judgement'], selected_inst['judgements'], key=j_key, horizontal=True, label_visibility='collapsed')
 
-            if 'directions' in instrument:
+            if 'directions' in selected_inst:
                 d_key = f"direction_{dom['num']}"
                 st.write(f"**{labels['direction_of_bias']}**")
-                responses[d_key] = st.radio(labels['direction_of_bias'], instrument['directions'], key=d_key, horizontal=True, label_visibility='collapsed')
+                responses[d_key] = st.radio(labels['direction_of_bias'], selected_inst['directions'], key=d_key, horizontal=True, label_visibility='collapsed')
 
             just_key = f"justification_{dom['num']}"
             responses[just_key] = st.text_area(f"{labels['justification']} (Domínio {dom['num']})", key=just_key, height=68)
             st.divider()
     else:
-        for idx, item in enumerate(instrument['items']):
+        for idx, item in enumerate(selected_inst['items']):
             st.markdown(f"**[{item.get('domain', '')}] {item['num']} - {item['text']}**")
 
             col_a, col_b = st.columns([1, 1])
             with col_a:
                 resp_key = f"item_{idx}"
-                responses[resp_key] = st.radio(labels['response'], instrument['options'], key=resp_key, horizontal=True, label_visibility='collapsed')
+                responses[resp_key] = st.radio(labels['response'], selected_inst['options'], key=resp_key, horizontal=True, label_visibility='collapsed')
             with col_b:
                 just_key = f"just_{idx}"
                 responses[just_key] = st.text_input(labels['justification'] + "/Comment", key=just_key, label_visibility='collapsed', placeholder='Your justification...')
@@ -104,7 +104,7 @@ def render_instrument_form(instrument, locale='en'):
         st.markdown(f"### {labels['overall_decision']}")
         col_app1, col_app2 = st.columns(2)
         with col_app1:
-            if instrument['type'] == 'jbi':
+            if selected_inst['type'] == 'jbi':
                 st.radio(labels['overall_decision'], [labels['include'], labels['exclude'], labels['seek_further_info'], labels['not_applicable']], key='overall_decision', horizontal=True)
             else:
                 st.radio(labels['overall_decision'], [labels['include'], labels['exclude'], labels['seek_further_info']], key='overall_decision', horizontal=True)
